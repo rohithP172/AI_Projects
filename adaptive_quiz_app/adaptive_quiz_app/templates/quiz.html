@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Question {{ current }} of {{ total }}</h2>
+        <div class="progress-bar">
+            <div class="progress" style="width: {{ progress }}%;"></div>
+        </div>
+        <form method="post">
+            <p>{{ question.question }}</p>
+            {% for opt in question.options %}
+                <input type="radio" name="answer" value="{{ opt }}" required> {{ opt }}<br>
+            {% endfor %}
+            <br>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>

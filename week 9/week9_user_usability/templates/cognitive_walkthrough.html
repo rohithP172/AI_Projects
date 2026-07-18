@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cognitive Walkthrough</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Cognitive Walkthrough / PURE Evaluation</h2>
+    <p>This evaluation captures how intuitive a task feels and whether users can predict its outcome.</p>
+
+    <form method="post">
+        <label>Task Evaluated:</label><br>
+        <input type="text" name="cw_task" required><br><br>
+
+        <label>What did you expect would happen when you performed the task?</label><br>
+        <input type="text" name="cw_expectation"><br><br>
+
+        <label>Did the system behave as expected?</label><br>
+        <input type="text" name="cw_feedback"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

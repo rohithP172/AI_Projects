@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tree Testing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Step 5 of 7: Tree Testing</h2>
+
+    <div class="progress-bar">
+        <div class="step done">1</div>
+        <div class="step done">2</div>
+        <div class="step done">3</div>
+        <div class="step done">4</div>
+        <div class="step done">5</div>
+        <div class="step">6</div>
+        <div class="step">7</div>
+    </div>
+
+    <form method="post">
+        <label for="tree_test_success">Success Rate (%)</label>
+        <input type="text" id="tree_test_success" name="tree_test_success" value="{{ tree_test_success }}">
+
+        <label for="tree_test_confusion">Describe Any Confusion During Navigation</label>
+        <textarea id="tree_test_confusion" name="tree_test_confusion">{{ tree_test_confusion }}</textarea>
+
+        <button type="submit">Next</button>
+    </form>
+</div>
+</body>
+</html>

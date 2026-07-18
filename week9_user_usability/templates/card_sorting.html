@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Sorting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="step-container">
+        <div class="container">
+            <h2>Step 4 of 7: Card Sorting</h2>
+            <div class="progress-bar">
+                <div class="step done">1</div>
+                <div class="step done">2</div>
+                <div class="step done">3</div>
+                <div class="step done">4</div>
+                <div class="step">5</div>
+                <div class="step">6</div>
+                <div class="step">7</div>
+            </div>
+
+            <form method="post">
+                <label for="card_sort_categories">Grouped Categories (e.g., Dashboard, Settings, Logout)</label>
+                <input type="text" id="card_sort_categories" name="card_sort_categories" value="{{ card_sort_categories }}">
+
+                <label for="card_sort_notes">Explanation of Grouping or Notes</label>
+                <textarea id="card_sort_notes" name="card_sort_notes">{{ card_sort_notes }}</textarea>
+
+                <button type="submit">Next</button>
+            </form>
+            <form method="get" action="/heuristics" style="display: inline;">
+                <button type="submit" class="back-button">← Back</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

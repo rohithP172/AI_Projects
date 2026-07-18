@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Evaluation Results</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="step-container">
+    <div class="container">
+        <h2>Step 4 of 4: Final Results</h2>
+        <div class="progress-bar">
+            <div class="step done">1</div>
+            <div class="step done">2</div>
+            <div class="step done">3</div>
+            <div class="step done">4</div>
+        </div>
+
+        <div class="results">
+            <p><strong>Navigation Intuition:</strong> {{ session['uf_navigation'] }}</p>
+            <p><strong>Visual Appeal:</strong> {{ session['uf_visuals'] }}</p>
+            <p><strong>Suggestions:</strong> {{ session['uf_notes'] }}</p>
+            <p><strong>Expected Outcome:</strong> {{ session['cw_expectation'] }}</p>
+            <p><strong>Actual Feedback:</strong> {{ session['cw_feedback'] }}</p>
+        </div>
+
+        <canvas id="feedbackChart" width="400" height="200"></canvas>
+
+        <script>
+            const ctx = document.getElementById('feedbackChart');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Navigation', 'Visuals'],
+                    datasets: [{
+                        label: 'User Satisfaction',
+                        data: [
+                            '{{ session['uf_navigation'] }}' === 'Yes' ? 5 : 2,
+                            '{{ session['uf_visuals'] }}' === 'Yes' ? 5 : 2
+                        ],
+                        backgroundColor: ['#00796b', '#26a69a']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 5
+                        }
+                    }
+                }
+            });
+        </script>
+        <form method="get" action="/">
+    <button type="submit">Back to Home </button>
+</form>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluation Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Final Evaluation Summary</h2>
+
+    <div class="results">
+        <h3>🧪 A/B Testing</h3>
+        <p><strong>Preference:</strong> {{ data.get('ab_preference', 'N/A') }}</p>
+        <p><strong>Reason:</strong> {{ data.get('ab_reason', 'N/A') }}</p>
+
+        <h3>📉 SUS Score</h3>
+        <p><strong>Score:</strong> {{ data.get('sus_score', 'N/A') }}</p>
+        <p><strong>Comments:</strong> {{ data.get('sus_comment', 'N/A') }}</p>
+
+        <h3>🧭 Task Performance</h3>
+        <p><strong>Completed:</strong> {{ data.get('task_result', 'N/A') }}</p>
+        <p><strong>Difficulty:</strong> {{ data.get('task_difficulty', 'N/A') }}</p>
+        <p><strong>Time Taken:</strong> {{ data.get('time_taken', 'N/A') }}s</p>
+
+        <h3>🧠 Heuristic Notes</h3>
+        <p><strong>Selected:</strong> {{ data.get('heuristics', []) | join(', ') }}</p>
+        <p><strong>Notes:</strong> {{ data.get('heuristic_notes', 'N/A') }}</p>
+
+        {% if data.get('heuristic_screenshot') %}
+        <p><strong>Screenshot:</strong></p>
+        <img src="{{ url_for('static', filename='../uploads/' + data['heuristic_screenshot']) }}" alt="Uploaded Screenshot" width="300">
+        {% endif %}
+
+        <h3>📊 Analytics Overview</h3>
+        <canvas id="summaryChart"></canvas>
+    </div>
+</div>
+
+<script>
+    const ctx = document.getElementById('summaryChart');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Session Time', 'Bounce Rate', 'Success Rate'],
+            datasets: [{
+                label: 'Analytics Summary',
+                data: [
+                    {{ data.get('avg_session_time', 0) }},
+                    {{ data.get('bounce_rate', 0) }},
+                    {{ data.get('task_success_rate', 0) }}
+                ],
+                backgroundColor: ['#42a5f5', '#ef5350', '#66bb6a']
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+</script>
+</body>
+</html>

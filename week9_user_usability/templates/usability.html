@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usability</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="step-container">
+        <div class="container">
+            <h2>Step 1 of 7: Usability Evaluation</h2>
+
+            <div class="progress-bar">
+                <div class="step done">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+                <div class="step">4</div>
+                <div class="step">5</div>
+                <div class="step">6</div>
+                <div class="step">7</div>
+            </div>
+
+            <form method="post">
+                <label for="task_description">Describe the task you attempted:</label>
+                <input type="text" id="task_description" name="task_description" value="{{ task_description }}">
+
+                <label for="task_completed">Was the task completed?</label>
+                <select id="task_completed" name="task_completed">
+                    <option value="">-- Select --</option>
+                    <option value="yes" {% if task_completed == 'yes' %}selected{% endif %}>Yes</option>
+                    <option value="no" {% if task_completed == 'no' %}selected{% endif %}>No</option>
+                </select>
+
+                <label for="task_time">Time Taken (in seconds):</label>
+                <input type="number" id="task_time" name="task_time" value="{{ task_time }}">
+                <button type="submit">Next</button>
+            
+        </form>
+        <form method="get" action="/" style="display: inline;">
+    <button type="submit" class="back-button">← Back</button>
+</form>
+
+        </div>
+    </div>
+</body>
+</html>

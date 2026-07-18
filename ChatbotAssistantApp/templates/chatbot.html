@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f0f9ff, #ecfeff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 3rem;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    input {
+      width: 80%;
+      max-width: 600px;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      background-color:rgb(37, 235, 136);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .response {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      width: 80%;
+      max-width: 600px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chatbot</h1>
+  <input type="text" id="chatQuery" placeholder="Ask Nova anything...">
+  <br />
+  <button onclick="askChatbot()">Send</button>
+  <div class="response" id="chatResult">Nova will answer here...</div>
+  <a href="/" style="margin-bottom: 20px; text-decoration: none;">
+  <button style="background-color: #3b82f6; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer;">
+    ⬅ Back to Home
+  </button>
+</a>
+
+
+  <script>
+    async function askChatbot() {
+      const query = document.getElementById('chatQuery').value;
+      if (!query.trim()) return;
+      const res = await fetch('/chatbot/query', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({query})
+      });
+      const data = await res.json();
+      document.getElementById('chatResult').innerText = data.response;
+    }
+  </script>
+</body>
+</html>

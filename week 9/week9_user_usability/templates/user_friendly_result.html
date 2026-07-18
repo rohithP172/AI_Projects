@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User-Friendly Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>User-Friendly Feedback Summary</h2>
+    <div class="results">
+        <p><strong>First Impression:</strong> {{ data.first_impression }}</p>
+        <p><strong>Navigation Easy:</strong> {{ data.navigation_easy }}</p>
+        <p><strong>Readability:</strong> {{ data.colors_readability }}</p>
+        <p><strong>Comfort Level:</strong> {{ data.overall_comfort }}</p>
+        <p><strong>Visual Appeal:</strong> {{ data.visual_appeal }}</p>
+        <p><strong>Emoji Feedback:</strong> {{ data.emoji_feedback }}</p>
+        <p><strong>Tested on Mobile:</strong> {{ data.mobile_tested }}</p>
+        <p><strong>Comments:</strong> {{ data.user_comments }}</p>
+    </div>
+</div>
+</body>
+</html>

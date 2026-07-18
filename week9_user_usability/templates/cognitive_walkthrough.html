@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cognitive Walkthrough</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="step-container">
+    <div class="container">
+        <h2>Step 2 of 4: Cognitive Walkthrough</h2>
+        <div class="progress-bar">
+            <div class="step done">1</div>
+            <div class="step done">2</div>
+            <div class="step">3</div>
+            <div class="step">4</div>
+        </div>
+
+        <form method="post">
+            <label>Task Evaluated:</label>
+            <input type="text" name="cw_task" required>
+
+            <label>What did you expect to happen?</label>
+            <input type="text" name="cw_expectation">
+
+            <label>What actually happened?</label>
+            <input type="text" name="cw_feedback">
+
+            <button type="submit">Next</button>
+        </form>
+        <form method="get" action="/user_friendly">
+    <button type="submit">Previous page </button>
+</form>
+
+    </div>
+</div>
+</body>
+</html>

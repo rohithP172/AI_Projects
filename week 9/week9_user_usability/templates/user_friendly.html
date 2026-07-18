@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User-Friendly Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>User-Friendly Evaluation</h2>
+    <p>This test evaluates visual design, comfort, and ease of interaction with the interface.</p>
+
+    <form method="post">
+        <label>How was your first impression of the design?</label><br>
+        <input type="text" name="first_impression" required><br><br>
+
+        <label>Was it easy to navigate?</label><br>
+        <select name="navigation_easy">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        <label>Were the colors and fonts readable?</label><br>
+        <select name="colors_readability">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        <label>Rate your comfort using the interface (1-5)</label><br>
+        <input type="number" name="overall_comfort" min="1" max="5"><br><br>
+
+        <label>How visually appealing was the interface?</label><br>
+        <input type="text" name="visual_appeal"><br><br>
+
+        <label>Emoji that best represents your feeling:</label><br>
+        <input type="text" name="emoji_feedback"><br><br>
+
+        <label>Did you test on mobile?</label><br>
+        <select name="mobile_tested">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        <label>Additional Comments:</label><br>
+        <textarea name="user_comments"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

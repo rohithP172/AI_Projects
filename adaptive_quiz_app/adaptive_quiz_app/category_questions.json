@@ -1,0 +1,284 @@
+{
+  "entertainment": [
+    {
+      "question": "Which movie features the quote 'I'll be back'?",
+      "options": [
+        "The Terminator",
+        "Predator",
+        "Die Hard"
+      ],
+      "answer": "The Terminator"
+    },
+    {
+      "question": "What is the name of the toy cowboy in Toy Story?",
+      "options": [
+        "Woody",
+        "Buzz",
+        "Andy"
+      ],
+      "answer": "Woody"
+    },
+    {
+      "question": "Who played Jack in Titanic?",
+      "options": [
+        "Leonardo DiCaprio",
+        "Brad Pitt",
+        "Tom Cruise"
+      ],
+      "answer": "Leonardo DiCaprio"
+    },
+    {
+      "question": "What year did the first Avengers movie release?",
+      "options": [
+        "2012",
+        "2010",
+        "2014"
+      ],
+      "answer": "2012"
+    },
+    {
+      "question": "Which wizarding school did Harry Potter attend?",
+      "options": [
+        "Hogwarts",
+        "Ilvermorny",
+        "Durmstrang"
+      ],
+      "answer": "Hogwarts"
+    }
+  ],
+  "history": [
+    {
+      "question": "Who was the first President of the United States?",
+      "options": [
+        "George Washington",
+        "Thomas Jefferson",
+        "John Adams"
+      ],
+      "answer": "George Washington"
+    },
+    {
+      "question": "What year did World War II end?",
+      "options": [
+        "1945",
+        "1942",
+        "1950"
+      ],
+      "answer": "1945"
+    },
+    {
+      "question": "What wall fell in 1989?",
+      "options": [
+        "Berlin Wall",
+        "Great Wall of China",
+        "Wall of Babylon"
+      ],
+      "answer": "Berlin Wall"
+    },
+    {
+      "question": "Who discovered America in 1492?",
+      "options": [
+        "Christopher Columbus",
+        "Vasco da Gama",
+        "Ferdinand Magellan"
+      ],
+      "answer": "Christopher Columbus"
+    },
+    {
+      "question": "Which empire did Julius Caesar belong to?",
+      "options": [
+        "Roman",
+        "Greek",
+        "Persian"
+      ],
+      "answer": "Roman"
+    }
+  ],
+  "animals": [
+    {
+      "question": "What is the fastest land animal?",
+      "options": [
+        "Cheetah",
+        "Leopard",
+        "Lion"
+      ],
+      "answer": "Cheetah"
+    },
+    {
+      "question": "Which mammal can fly?",
+      "options": [
+        "Bat",
+        "Squirrel",
+        "Parrot"
+      ],
+      "answer": "Bat"
+    },
+    {
+      "question": "What is a baby kangaroo called?",
+      "options": [
+        "Joey",
+        "Cub",
+        "Calf"
+      ],
+      "answer": "Joey"
+    },
+    {
+      "question": "Which animal is known as the ship of the desert?",
+      "options": [
+        "Camel",
+        "Horse",
+        "Elephant"
+      ],
+      "answer": "Camel"
+    },
+    {
+      "question": "How many legs does a spider have?",
+      "options": [
+        "8",
+        "6",
+        "10"
+      ],
+      "answer": "8"
+    }
+  ],
+  "sports": [
+    {
+      "question": "How many players in a football team (soccer)?",
+      "options": [
+        "11",
+        "9",
+        "10"
+      ],
+      "answer": "11"
+    },
+    {
+      "question": "In which sport is the term 'love' used?",
+      "options": [
+        "Tennis",
+        "Badminton",
+        "Cricket"
+      ],
+      "answer": "Tennis"
+    },
+    {
+      "question": "What country hosted the 2016 Summer Olympics?",
+      "options": [
+        "Brazil",
+        "China",
+        "Japan"
+      ],
+      "answer": "Brazil"
+    },
+    {
+      "question": "What is the highest score in a single basketball game by one player?",
+      "options": [
+        "100",
+        "81",
+        "70"
+      ],
+      "answer": "100"
+    },
+    {
+      "question": "Which sport uses a puck?",
+      "options": [
+        "Hockey",
+        "Football",
+        "Basketball"
+      ],
+      "answer": "Hockey"
+    }
+  ],
+  "music": [
+    {
+      "question": "Who is known as the King of Pop?",
+      "options": [
+        "Michael Jackson",
+        "Elvis Presley",
+        "Prince"
+      ],
+      "answer": "Michael Jackson"
+    },
+    {
+      "question": "Which band sang 'Bohemian Rhapsody'?",
+      "options": [
+        "Queen",
+        "Beatles",
+        "Pink Floyd"
+      ],
+      "answer": "Queen"
+    },
+    {
+      "question": "Who is the lead singer of U2?",
+      "options": [
+        "Bono",
+        "Sting",
+        "Ozzy"
+      ],
+      "answer": "Bono"
+    },
+    {
+      "question": "Which female artist released 'Hello' in 2015?",
+      "options": [
+        "Adele",
+        "Taylor Swift",
+        "Rihanna"
+      ],
+      "answer": "Adele"
+    },
+    {
+      "question": "What instrument has 88 keys?",
+      "options": [
+        "Piano",
+        "Organ",
+        "Guitar"
+      ],
+      "answer": "Piano"
+    }
+  ],
+  "food_drink": [
+    {
+      "question": "What is sushi traditionally wrapped in?",
+      "options": [
+        "Seaweed",
+        "Rice paper",
+        "Bread"
+      ],
+      "answer": "Seaweed"
+    },
+    {
+      "question": "What fruit has its seeds on the outside?",
+      "options": [
+        "Strawberry",
+        "Blueberry",
+        "Pomegranate"
+      ],
+      "answer": "Strawberry"
+    },
+    {
+      "question": "Which country is famous for tacos?",
+      "options": [
+        "Mexico",
+        "Spain",
+        "Brazil"
+      ],
+      "answer": "Mexico"
+    },
+    {
+      "question": "What\u2019s the main ingredient in hummus?",
+      "options": [
+        "Chickpeas",
+        "Lentils",
+        "Beans"
+      ],
+      "answer": "Chickpeas"
+    },
+    {
+      "question": "Which drink is known as the 'King of Beers'?",
+      "options": [
+        "Budweiser",
+        "Heineken",
+        "Corona"
+      ],
+      "answer": "Budweiser"
+    }
+  ]
+}

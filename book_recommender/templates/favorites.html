@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Favorite Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>❤️ My Favorite Books</h1>
+
+        {% if favorites %}
+        <div class="favorites-list">
+            {% for book in favorites %}
+            <div class="favorite-item">
+                {% if book.thumbnail %}
+                <img src="{{ book.thumbnail }}" alt="Book Cover">
+                {% endif %}
+                <div>
+                    <h3>{{ book.title }}</h3>
+                    <p><strong>Authors:</strong> {{ book.authors }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>No favorites added yet.</p>
+        {% endif %}
+
+        <a href="/" class="fav-link">⬅ Back to Search</a>
+    </div>
+</body>
+</html>

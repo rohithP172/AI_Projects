@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Assistant - Ava</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f2fe, #fefce8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      color: #111827;
+    }
+    #chat-container {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 6.0rem;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .message {
+      margin: 0.7rem 0;
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      max-width: 90%;
+    }
+    .user {
+      background-color: #dbeafe;
+      align-self: flex-end;
+      text-align: right;
+    }
+    .bot {
+      background-color: #f0fdf4;
+      align-self: flex-start;
+      text-align: left;
+    }
+    #messages {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 0.8rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Talk to Ava</h1>
+  <div id="chat-container">
+    <div id="messages"></div>
+    <input type="text" id="query" placeholder="Type your message..." onkeydown="if(event.key==='Enter'){askAssistant()}">
+    <button onclick="askAssistant()">Send</button>
+  </div>
+  <a href="/" style="margin-bottom: 20px; text-decoration: none;">
+  <button style="background-color: #3b82f6; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer;">
+    ⬅ Back to Home
+  </button>
+</a>
+
+  <script>
+    async function askAssistant() {
+      const query = document.getElementById('query').value.trim();
+      if (!query) return;
+
+      appendMessage(query, 'user');
+      document.getElementById('query').value = '';
+
+      const res = await fetch('/assistant/query', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ query })
+      });
+
+      const data = await res.json();
+      appendMessage(data.response, 'bot');
+    }
+
+    function appendMessage(text, sender) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `message ${sender}`;
+      msgDiv.innerText = text;
+      document.getElementById('messages').appendChild(msgDiv);
+      msgDiv.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

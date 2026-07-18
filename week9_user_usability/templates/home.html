@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Evaluation Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome to the Usability & User-Friendliness Evaluation</h2>
+    <p>Please choose the evaluation method you'd like to proceed with:</p>
+    <form method="get" action="/usability">
+        <button type="submit">Start Usability Evaluation</button>
+    </form>
+    <br>
+    <form method="get" action="/user_friendly">
+        <button type="submit">Start User-Friendly Evaluation</button>
+    </form>
+</div>
+</body>
+</html>

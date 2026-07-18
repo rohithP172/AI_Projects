@@ -1,0 +1,95 @@
+﻿transaction_id,date,description,type,amount,balance,category
+TXN2270,2025-05-01,Netflix Subscription,Debit,412.24,-36758.53,Entertainment
+TXN2271,2025-05-01,Gym Membership,Debit,243.93,-37002.46,Health & Fitness
+TXN2272,2025-05-02,Car Insurance,Debit,484.73,-37487.19,Insurance
+TXN2273,2025-05-02,Spotify Payment,Debit,269.47,-37756.66,Entertainment
+TXN2274,2025-05-03,Phone Recharge,Debit,390.94,-38147.6,Mobile Services
+TXN2275,2025-05-05,Yoga Subscription,Debit,287.92,-38435.52,Health & Fitness
+TXN2276,2025-05-07,Flipkart Order,Debit,13.36,-38448.88,Online Shopping
+TXN2277,2025-05-07,Amazon Purchase,Debit,302.3,-38751.18,Online Shopping
+TXN2278,2025-05-09,ATM Withdrawal,Debit,316.58,-39067.76,Cash Withdrawal
+TXN2279,2025-05-09,Dining Out,Debit,455.81,-39523.57,Dining
+TXN2280,2025-05-10,Mobile Data Pack,Debit,489.91,-40013.48,Mobile Services
+TXN2281,2025-05-10,Electricity Bill,Debit,164.99,-40178.47,Utilities
+TXN2282,2025-05-11,Salary Credit,Credit,305.77,-39872.7,Income
+TXN2283,2025-05-11,Gym Membership,Debit,262.88,-40135.58,Health & Fitness
+TXN2284,2025-05-12,Internet Bill Payment,Debit,359.27,-40494.85,Utilities
+TXN2285,2025-05-12,Clothing Store,Debit,154.4,-40649.25,Apparel
+TXN2286,2025-05-13,Yoga Subscription,Debit,180.49,-40829.74,Health & Fitness
+TXN2287,2025-05-14,Fast Food,Debit,251.96,-41081.7,Dining
+TXN2288,2025-05-14,Opening Balance,Credit,0,-41081.7,Opening
+TXN2289,2025-05-15,Movie Ticket,Debit,460.97,-41542.67,Entertainment
+TXN2290,2025-05-15,Yoga Subscription,Debit,92.29,-41634.96,Health & Fitness
+TXN2291,2025-05-19,Opening Balance,Credit,0,-41634.96,Opening
+TXN2292,2025-05-20,Opening Balance,Credit,0,-41634.96,Opening
+TXN2293,2025-05-20,Amazon Purchase,Debit,406.14,-42041.1,Online Shopping
+TXN2294,2025-05-21,Fast Food,Debit,140.72,-42181.82,Dining
+TXN2295,2025-05-22,Gym Membership,Debit,458.37,-42640.19,Health & Fitness
+TXN2296,2025-05-22,ATM Withdrawal,Debit,242.93,-42883.12,Cash Withdrawal
+TXN2297,2025-05-24,Opening Balance,Credit,0,-42883.12,Opening
+TXN2298,2025-05-25,Supermarket Shopping,Debit,19.01,-42902.13,Grocery
+TXN2299,2025-05-26,Movie Ticket,Debit,366.59,-43268.72,Entertainment
+TXN2300,2025-05-27,ATM Withdrawal,Debit,275.96,-43544.68,Cash Withdrawal
+TXN2301,2025-05-27,Opening Balance,Credit,0,-43544.68,Opening
+TXN2302,2025-05-28,Amazon Purchase,Debit,479.52,-44024.2,Online Shopping
+TXN2303,2025-05-29,Phone Recharge,Debit,165.01,-44189.21,Mobile Services
+TXN2304,2025-05-29,Phone Recharge,Debit,485.75,-44674.96,Mobile Services
+TXN2305,2025-05-31,Flipkart Order,Debit,18.67,-44693.63,Online Shopping
+TXN2306,2025-06-01,Insurance Premium Payment,Debit,158.97,-44852.6,Insurance
+TXN2307,2025-06-01,Dining Out,Debit,432.48,-45285.08,Dining
+TXN2308,2025-06-02,Phone Recharge,Debit,195.89,-45480.97,Mobile Services
+TXN2309,2025-06-05,Freelance Payment,Credit,331.3,-45149.67,Income
+TXN2310,2025-06-05,Yoga Subscription,Debit,463.34,-45613.01,Health & Fitness
+TXN2311,2025-06-06,Water Bill,Debit,73.98,-45686.99,Utilities
+TXN2312,2025-06-07,Footwear Purchase,Debit,46.27,-45733.26,Apparel
+TXN2313,2025-06-07,Amazon Purchase,Debit,205.98,-45939.24,Online Shopping
+TXN2314,2025-06-10,Electricity Bill,Debit,418.52,-46357.76,Utilities
+TXN2315,2025-06-11,Opening Balance,Credit,0,-46357.76,Opening
+TXN2316,2025-06-11,Coffee Shop,Debit,218.28,-46576.04,Dining
+TXN2317,2025-06-13,Coffee Shop,Debit,196.79,-46772.83,Dining
+TXN2318,2025-06-13,Footwear Purchase,Debit,216.44,-46989.27,Apparel
+TXN2319,2025-06-14,Grocery Store Purchase,Debit,51.71,-47040.98,Grocery
+TXN2320,2025-06-15,Water Bill,Debit,257.82,-47298.8,Utilities
+TXN2321,2025-06-15,Gym Membership,Debit,189.44,-47488.24,Health & Fitness
+TXN2322,2025-06-17,Dining Out,Debit,463.43,-47951.67,Dining
+TXN2323,2025-06-17,Interest Credit,Credit,469.1,-47482.57,Income
+TXN2324,2025-06-20,Flipkart Order,Debit,14.75,-47497.32,Online Shopping
+TXN2325,2025-06-25,Phone Recharge,Debit,310.6,-47807.92,Mobile Services
+TXN2326,2025-06-26,Salary Credit,Credit,169.88,-47638.04,Income
+TXN2327,2025-06-26,Flipkart Order,Debit,213.5,-47851.54,Online Shopping
+TXN2328,2025-06-27,Salary Credit,Credit,69.02,-47782.52,Income
+TXN2329,2025-06-28,Mobile Data Pack,Debit,66.36,-47848.88,Mobile Services
+TXN2330,2025-06-28,Interest Credit,Credit,405.07,-47443.81,Income
+TXN2331,2025-06-30,ATM Withdrawal,Debit,339.87,-47783.68,Cash Withdrawal
+TXN2332,2025-07-02,Grocery Store Purchase,Debit,21.86,-47805.54,Grocery
+TXN2333,2025-07-03,Clothing Store,Debit,134.28,-47939.82,Apparel
+TXN2334,2025-07-05,Salary Credit,Credit,302.95,-47636.87,Income
+TXN2335,2025-07-05,Client Transfer,Credit,84.22,-47552.65,External Transfer
+TXN2336,2025-07-07,Clothing Store,Debit,229.02,-47781.67,Apparel
+TXN2337,2025-07-09,Opening Balance,Credit,0,-47781.67,Opening
+TXN2338,2025-07-10,Gym Membership,Debit,150.13,-47931.8,Health & Fitness
+TXN2339,2025-07-12,Salary Credit,Credit,354.02,-47577.78,Income
+TXN2340,2025-07-12,Supermarket Shopping,Debit,479.27,-48057.05,Grocery
+TXN2341,2025-07-14,Grocery Store Purchase,Debit,32.28,-48089.33,Grocery
+TXN2342,2025-07-15,Electricity Bill,Debit,353.24,-48442.57,Utilities
+TXN2343,2025-07-15,Fast Food,Debit,148.79,-48591.36,Dining
+TXN2344,2025-07-16,Internet Bill Payment,Debit,306.55,-48897.91,Utilities
+TXN2345,2025-07-16,Friend Transfer,Credit,107.13,-48790.78,External Transfer
+TXN2346,2025-07-17,Internet Bill Payment,Debit,450.7,-49241.48,Utilities
+TXN2347,2025-07-17,ATM Withdrawal,Debit,107.8,-49349.28,Cash Withdrawal
+TXN2348,2025-07-18,Phone Recharge,Debit,93.3,-49442.58,Mobile Services
+TXN2349,2025-07-18,Footwear Purchase,Debit,390.59,-49833.17,Apparel
+TXN2350,2025-07-19,Gym Membership,Debit,498.99,-50332.16,Health & Fitness
+TXN2351,2025-07-19,Flipkart Order,Debit,230.76,-50562.92,Online Shopping
+TXN2352,2025-07-20,Movie Ticket,Debit,111.03,-50673.95,Entertainment
+TXN2353,2025-07-20,ATM Withdrawal,Debit,403.35,-51077.3,Cash Withdrawal
+TXN2354,2025-07-21,Mobile Data Pack,Debit,316.91,-51394.21,Mobile Services
+TXN2355,2025-07-21,Insurance Premium Payment,Debit,317.9,-51712.11,Insurance
+TXN2356,2025-07-23,Flipkart Order,Debit,229.89,-51942,Online Shopping
+TXN2357,2025-07-24,Freelance Payment,Credit,350.1,-51591.9,Income
+TXN2358,2025-07-25,Electricity Bill,Debit,273.38,-51865.28,Utilities
+TXN2359,2025-07-25,Movie Ticket,Debit,451.69,-52316.97,Entertainment
+TXN2360,2025-07-27,Salary Credit,Credit,425.67,-51891.3,Income
+TXN2361,2025-07-27,Opening Balance,Credit,0,-51891.3,Opening
+TXN2362,2025-07-28,Grocery Store Purchase,Debit,318.75,-52210.05,Grocery
+TXN2363,2025-07-28,Insurance Premium Payment,Debit,397.9,-52607.95,Insurance

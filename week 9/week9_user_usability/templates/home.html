@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | Usability Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Usability & User-Friendly Testing</h1>
+    <p>This platform lets you explore and evaluate user experience through two parallel approaches:</p>
+
+    <div style="display: flex; justify-content: space-around; margin-top: 30px;">
+        <div>
+            <h2>User-Friendly</h2>
+            <p>Evaluate interface visual appeal, comfort, and accessibility.</p>
+            <a href="{{ url_for('user_friendly') }}">
+                <button>User-Friendly Evaluation</button>
+            </a>
+        </div>
+
+        <div>
+            <h2>Usability</h2>
+            <p>Measure task performance, navigation ease, and satisfaction.</p>
+            <a href="{{ url_for('usability') }}">
+                <button>Usability Evaluation</button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

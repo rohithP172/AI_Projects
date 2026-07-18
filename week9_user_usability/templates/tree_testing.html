@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tree Testing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="step-container">
+        <div class="container">
+            <h2>Step 5 of 7: Tree Testing</h2>
+            <div class="progress-bar">
+                <div class="step done">1</div>
+                <div class="step done">2</div>
+                <div class="step done">3</div>
+                <div class="step done">4</div>
+                <div class="step">5</div>
+                <div class="step">6</div>
+                <div class="step">7</div>
+            </div>
+
+            <form method="post">
+                <label for="tree_path">Path Taken (e.g., Home > Settings > Privacy)</label>
+                <input type="text" id="tree_path" name="tree_path" value="{{ tree_path }}">
+
+                <label for="tree_success">Was the path successful?</label>
+                <select id="tree_success" name="tree_success">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <button type="submit">Next</button>
+            </form>
+            <form method="get" action="/card_sorting" style="display: inline;">
+                <button type="submit" class="back-button">← Back</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

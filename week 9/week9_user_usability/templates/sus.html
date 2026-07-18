@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SUS Questionnaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Step 2 of 7: SUS Questionnaire</h2>
+
+    <div class="progress-bar">
+        <div class="step done">1</div>
+        <div class="step done">2</div>
+        <div class="step">3</div>
+        <div class="step">4</div>
+        <div class="step">5</div>
+        <div class="step">6</div>
+        <div class="step">7</div>
+    </div>
+
+    <form method="post">
+        {% for i in range(1, 11) %}
+        <label><strong>Q{{ i }}.</strong> {{
+            "I think that I would like to use this system frequently." if i == 1 else
+            "I found the system unnecessarily complex." if i == 2 else
+            "I thought the system was easy to use." if i == 3 else
+            "I think that I would need technical support to use this system." if i == 4 else
+            "I found the various functions well integrated." if i == 5 else
+            "I thought there was too much inconsistency in the system." if i == 6 else
+            "I would imagine that most people would learn to use this system very quickly." if i == 7 else
+            "I found the system very cumbersome to use." if i == 8 else
+            "I felt very confident using the system." if i == 9 else
+            "I needed to learn a lot before I could get going with this system." 
+        }}</label>
+
+        <div class="likert-labels">
+            <span>Strongly<br>Disagree</span>
+            <span>Disagree</span>
+            <span>Neutral</span>
+            <span>Agree</span>
+            <span>Strongly<br>Agree</span>
+        </div>
+
+        <div class="likert-row">
+            {% for j in range(1, 6) %}
+            <label class="likert-option">
+                <input type="radio" name="q{{ i }}" value="{{ j }}" required> {{ j }}
+            </label>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <label for="sus_comment">Any Comments?</label>
+        <input type="text" name="sus_comment" id="sus_comment" value="{{ sus_comment }}">
+
+        <label for="sus_recommend">Would You Recommend This System?</label>
+        <input type="text" name="sus_recommend" id="sus_recommend" value="{{ sus_recommend }}">
+
+        <button type="submit">Next</button>
+    </form>
+</div>
+</body>
+</html>

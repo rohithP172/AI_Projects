@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Not Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>Movie Not Found</h2>
+        <p>Sorry, we couldn't find any information for <strong>{{ title }}</strong>.</p>
+        <a class="back" href="/">Try another search</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+botbuilder-core==4.14.1
+aiohttp
+requests
+wikipedia
+python-dotenv
+azure-ai-textanalytics
+

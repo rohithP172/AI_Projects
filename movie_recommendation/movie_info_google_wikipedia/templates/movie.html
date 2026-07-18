@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ movie.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>{{ movie.title }}</h2>
+        {% if movie.year %}<p><strong>Year:</strong> {{ movie.year }}</p>{% endif %}
+        {% if movie.actors %}<p><strong>Actors:</strong> {{ movie.actors }}</p>{% endif %}
+        {% if movie.rating %}<p><strong>IMDb Rating:</strong> {{ movie.rating }}</p>{% endif %}
+        {% if movie.genre %}<p><strong>Genre:</strong> {{ movie.genre | join(", ") }}</p>{% endif %}
+        <p><strong>Storyline:</strong> {{ movie.storyline }}</p>
+        <p><strong>Source:</strong> {{ movie.source }}</p>
+        <p><strong>Watch on:</strong> {{ movie.platform }}</p>
+        <a href="{{ movie.link }}" target="_blank">More Info</a>
+
+        {% if similar %}
+            <h3>Similar Movies:</h3>
+            <ul>
+                {% for title in similar %}
+                    <li>{{ title }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <a class="back" href="/">Search another movie</a>
+    </div>
+</body>
+</html>

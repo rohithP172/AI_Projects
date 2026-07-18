@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        
+       <div class="tooltip-container">
+  <span class="help-icon">❓</span>
+  <div class="custom-tooltip">Click the 🤖 chatbot in the bottom-right corner for help, suggestions, or fun recommendations!</div>
+</div>
+
+
+
+        <h1>📚 Book Recommendation System</h1>
+
+        <form action="/recommend" method="post">
+            <div class="toolbar">
+                <input type="text" id="book" name="book" placeholder="Type or speak a book title, genre, or mood..." required>
+                <button type="submit">Search</button>
+                <button type="button" onclick="startVoice()">🎤</button>
+                <button type="button" onclick="toggleDark()">🌙</button>
+                <a href="/favorites" class="fav-link">❤️ Favorites</a>
+
+            </div>
+        </form>
+
+        <ul id="suggestions"></ul>
+
+        {% if error %}
+        <div class="error-msg">{{ error }}</div>
+        {% endif %}
+
+        {% if book_info and book_info.title != 'Not found' %}
+        <div class="book-card">
+            <h2>{{ book_info.title }}</h2>
+            <p><strong>Author(s):</strong> {{ book_info.authors }}</p>
+            <p><strong>Genre:</strong> {{ book_info.genre }}</p>
+            <p><strong>Rating:</strong> ⭐ {{ book_info.rating }} &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Pages:</strong> {{ book_info.pageCount }}</p>
+            <p>{{ book_info.description }}</p>
+            {% if book_info.thumbnail %}
+            <img src="{{ book_info.thumbnail }}" alt="Book cover">
+            {% endif %}
+            {% if book_info.preview %}
+            <p><a href="{{ book_info.preview }}" target="_blank">📖 Preview this book</a></p>
+            {% endif %}
+            <form action="/add_favorite" method="post">
+                <input type="hidden" name="title" value="{{ book_info.title }}">
+                <input type="hidden" name="authors" value="{{ book_info.authors }}">
+                <input type="hidden" name="thumbnail" value="{{ book_info.thumbnail }}">
+                <button type="submit">❤️ Add to Favorites</button>
+            </form>
+                    <!-- Back to Home Button -->
+        <a href="/" style="
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+        ">⬅ Back to Home</a>
+        </div>
+        {% endif %}
+
+        {% if similar_books %}
+        <div class="similar-books">
+            {% for rec in similar_books %}
+            <div class="book-item">
+                <img src="{{ rec.thumbnail }}" alt="Book">
+                <h4>{{ rec.title }}</h4>
+                <p>{{ rec.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button id="chat-toggle">🤖</button>
+
+    <!-- Chatbot Interface -->
+    <div id="chatbot">
+        <h3>Ask Me Anything</h3>
+        <div id="chatbot-response">Try typing a book name, genre, or your mood.<br><br>
+            <strong>Moods:</strong> happy, sad, emotional, uplifting<br>
+            <strong>Genres:</strong> fantasy, thriller, romance, sci-fi, history, self-help
+        </div>
+        <input type="text" id="chat-input" placeholder="Type your question...">
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User-Friendliness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="step-container">
+    <div class="container">
+        <h2>Step 1 of 4: User-Friendliness Evaluation</h2>
+        <div class="progress-bar">
+            <div class="step done">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+            <div class="step">4</div>
+        </div>
+
+        <form method="post">
+            <label>Navigation was intuitive</label>
+            <select name="uf_navigation" required>
+                <option disabled selected value="">-- Select --</option>
+                <option>Strongly Agree</option>
+                <option>Agree</option>
+                <option>Neutral</option>
+                <option>Disagree</option>
+                <option>Strongly Disagree</option>
+            </select>
+
+            <label>Visual design was appealing</label>
+            <select name="uf_visuals" required>
+                <option disabled selected value="">-- Select --</option>
+                <option>Strongly Agree</option>
+                <option>Agree</option>
+                <option>Neutral</option>
+                <option>Disagree</option>
+                <option>Strongly Disagree</option>
+            </select>
+
+            <label>Any suggestions?</label>
+            <textarea name="uf_notes" placeholder="Write your suggestions here..."></textarea>
+
+            <button type="submit">Next</button>
+        </form>
+        <form method="get" action="/">
+    <button type="submit">Back to Home</button>
+</form>
+
+
+    </div>
+</div>
+</body>
+</html>

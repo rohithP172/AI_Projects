@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heuristic Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Step 3 of 7: Heuristic Evaluation</h2>
+    <div class="progress-bar">
+        <div class="step done">1</div>
+        <div class="step done">2</div>
+        <div class="step">3</div>
+        <div class="step">4</div>
+        <div class="step">5</div>
+        <div class="step">6</div>
+        <div class="step">7</div>
+    </div>
+
+    <p><strong>Instructions:</strong> Select heuristics that the system satisfies. You may also upload a screenshot as evidence.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label><input type="checkbox" name="heuristics" value="Visibility" {% if 'Visibility' in heuristics %}checked{% endif %}> Visibility of system status</label><br>
+        <label><input type="checkbox" name="heuristics" value="Match" {% if 'Match' in heuristics %}checked{% endif %}> Match between system and real world</label><br>
+        <label><input type="checkbox" name="heuristics" value="UserControl" {% if 'UserControl' in heuristics %}checked{% endif %}> User control and freedom</label><br>
+        <label><input type="checkbox" name="heuristics" value="Consistency" {% if 'Consistency' in heuristics %}checked{% endif %}> Consistency and standards</label><br>
+        <label><input type="checkbox" name="heuristics" value="ErrorPrevention" {% if 'ErrorPrevention' in heuristics %}checked{% endif %}> Error prevention</label><br>
+
+        <label for="heuristic_notes">Notes:</label>
+        <textarea name="heuristic_notes" id="heuristic_notes" rows="3">{{ heuristic_notes or '' }}</textarea>
+
+        <label for="evidence_screenshot">Upload Screenshot (optional):</label>
+        <input type="file" name="evidence_screenshot" accept="image/*">
+
+        <button type="submit">Next</button>
+    </form>
+</div>
+</body>
+</html>

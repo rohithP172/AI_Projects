@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f8e9;
+    border-left: 5px solid #aed581;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.step {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.step.done {
+    background: #00796b;
+}
+
+.likert-labels {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: -5px;
+    white-space: nowrap;
+}
+
+.likert-row {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 0;
+}
+
+.likert-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.likert-option input[type="radio"] {
+    margin-top: 5px;
+}
+
+/* Home Page Specific Styling */
+.container.welcome {
+    padding: 50px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container.welcome h2 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.container.welcome p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.container.welcome form {
+    margin-top: 15px;
+    gap: 10px;
+}

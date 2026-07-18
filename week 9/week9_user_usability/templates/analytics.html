@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Step 7 of 7: Analytics Evaluation</h2>
+    <div class="progress-bar">
+        <div class="step done">1</div>
+        <div class="step done">2</div>
+        <div class="step done">3</div>
+        <div class="step done">4</div>
+        <div class="step done">5</div>
+        <div class="step done">6</div>
+        <div class="step">7</div>
+    </div>
+
+    <p><strong>Instructions:</strong> Enter the system’s performance data to assess usability metrics visually.</p>
+
+    <form method="post">
+        <label for="avg_session_time">Average Session Time (seconds):</label>
+        <input type="number" name="avg_session_time" id="avg_session_time" required value="{{ avg_session_time or '' }}">
+
+        <label for="bounce_rate">Bounce Rate (%):</label>
+        <input type="number" name="bounce_rate" id="bounce_rate" required value="{{ bounce_rate or '' }}">
+
+        <label for="task_success_rate">Task Success Rate (%):</label>
+        <input type="number" name="task_success_rate" id="task_success_rate" required value="{{ task_success_rate or '' }}">
+
+        <button type="submit">Finish</button>
+    </form>
+
+    {% if avg_session_time and bounce_rate and task_success_rate %}
+    <div style="margin-top: 30px;">
+        <canvas id="analyticsChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('analyticsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Avg Session Time', 'Bounce Rate', 'Success Rate'],
+                datasets: [{
+                    label: 'Evaluation Metrics',
+                    data: [{{ avg_session_time }}, {{ bounce_rate }}, {{ task_success_rate }}],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    {% endif %}
+</div>
+</body>
+</html>

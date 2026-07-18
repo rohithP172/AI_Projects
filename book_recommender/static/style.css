@@ -1,0 +1,265 @@
+/* Background and layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8cdda, #e8defa);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    background: #ffffffee;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Toolbar styling */
+form .toolbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+/* Book display styles */
+.book-card, .similar-books {
+    margin-top: 30px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.book-card img, .similar-books img {
+    max-width: 100px;
+    margin-top: 10px;
+}
+
+.similar-books {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Help and tooltip */
+.help-icon {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: block;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+#error-msg {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Chatbot styling */
+#chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #673ab7;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#chatbot {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#chatbot h3 {
+    margin-top: 0;
+}
+
+#chatbot-response {
+    min-height: 60px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 6px;
+}
+
+#chat-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Favorites feature */
+.fav-link {
+    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #e91e63;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.fav-link:hover {
+    background-color: #c2185b;
+}
+
+.fav-button {
+    margin-top: 15px;
+    padding: 8px 12px;
+    font-size: 15px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.fav-button:hover {
+    background-color: #d81b60;
+}
+
+.favorites-list {
+    margin-top: 20px;
+    background-color: #fffaf0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.favorites-list h2 {
+    margin-bottom: 15px;
+}
+
+.favorite-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.favorite-item img {
+    max-width: 80px;
+    border-radius: 6px;
+}
+/* DARK MODE SUPPORT */
+body.dark-mode {
+    background: linear-gradient(135deg, #121212, #2c2c2c);
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background: #1e1e1e;
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode button,
+body.dark-mode #chat-input {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark-mode .book-card,
+body.dark-mode .similar-books,
+body.dark-mode .tooltip,
+body.dark-mode #chatbot-response {
+    background-color: #2a2a2a;
+    color: #eee;
+}
+
+body.dark-mode #chatbot {
+    background-color: #1c1c1c;
+}
+.dark-mode h1 {
+    color: white;
+}
+.tooltip-container {
+    position: relative;
+    display: block;
+}
+
+.custom-tooltip {
+    display: none;
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    top: 25px;
+    left: 0;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.tooltip-container:hover .custom-tooltip {
+    display: block;
+}
+
+
