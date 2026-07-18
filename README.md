@@ -1,2 +1,2 @@
 # Artificial_Intelligence_Projects
-Repository for Artificial Intelligence for Human-Computer Interaction assignments and projects
+Repository for Artificial Intelligence for Human-Computer Interaction projects
